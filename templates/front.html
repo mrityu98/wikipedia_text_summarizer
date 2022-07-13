@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Wiki_sum</title>
+         <link rel="stylesheet" href="/static/wiki_summ.css">
+           <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;800&family=Oxygen:wght@700&display=swap" rel="stylesheet"> 
+         <script type="" src="/static/front_script.js" ></script>
+         <link rel="shortcut icon" href="/static/favicon.ico.jpg" type="image/x-icon"> 
+        </head>
+        <body> 
+            <image id="logo" src="/static/icon.png">
+            <h1 style="font-weight:300;" id="main">Summarizer</h1>
+            <form action="#" method="post">
+               <div class="wiki">
+                <input type="text" placeholder="Enter the url" id="search1" size="30" name="tex" required  >
+                <br>
+                <label for="search1">Insert Wikipedia URL above</label>
+                <div class="s2">
+                <input type="number"  placeholder="Enter maximum frequency" id="search2" name="num"  size="20" onkeyup="is_empty()"  >
+                <br>
+                <label for="search2">Hint: Use word frequency between 20 and 50</label>
+                <br>
+                </div>
+                <button type="submit" id="but" onclick="f()" disabled>Summarize</button>
+                <div id="loader"></div>
+                </div>
+            </form>
+            
+         </body> 
+         </html>
+

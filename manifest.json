@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name":"Wikipedia-Summarizer",
+    "version":"1.0",
+    "action":{
+        "default_icon":"/static/icon.png",
+        "default_popup":"/templates/front.html"
+    },
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+        
+            "js":["front_script.js"]
+        }
+    ]
+
+    
+   
+}

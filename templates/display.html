@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/display.css">
+           <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;800&family=Oxygen:wght@700&display=swap" rel="stylesheet"> 
+    <title>Summarized Text</title>
+</head>
+<body>
+    <h2 id="first">Summarized Text</h2>
+    {% for key,value in result.items() %}
+    {% if key == 'summarized_text' %} 
+    <p class="main">{{ value }}</p>
+    {% elif key == 'len_original' %}
+    <h2 id="second">Additional Information</h2> 
+    <div class = "d"><p class="sec">Length of original text - {{ value }}</p></div>
+    {% elif key == 'len_summarized' %} 
+    <div class ="d"><p class="sec">Length of summarized text - {{ value }}</p></div>
+    {% else %} 
+    <div class="d"><p class="sec">Summarization percentage - {{ value }}</p></div>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
